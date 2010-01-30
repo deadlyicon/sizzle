@@ -191,7 +191,7 @@ test("multiple", function() {
 });
 
 test("child and adjacent", function() {
-	expect(27);
+	expect(28);
 	t( "Child", "p > a", ["simon1","google","groups","mark","yahoo","simon"] );
 	t( "Child", "p> a", ["simon1","google","groups","mark","yahoo","simon"] );
 	t( "Child", "p >a", ["simon1","google","groups","mark","yahoo","simon"] );
@@ -199,6 +199,7 @@ test("child and adjacent", function() {
 	t( "Child w/ Class", "p > a.blog", ["mark","simon"] );
 	t( "All Children", "code > *", ["anchor1","anchor2"] );
 	t( "All Grandchildren", "p > * > *", ["anchor1","anchor2"] );
+	t( "All Descendants of All Children", "#all-descendants-of-all-children-test-group > * *", ["desn-1", "desn-2", "desn-3", "desn-4", "desn-5"] );
 	t( "Adjacent", "a + a", ["groups"] );
 	t( "Adjacent", "a +a", ["groups"] );
 	t( "Adjacent", "a+ a", ["groups"] );
